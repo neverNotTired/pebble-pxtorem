@@ -1,72 +1,55 @@
-<<<<<<< HEAD
-# px2rem
-[![npm version](https://badge.fury.io/js/webpack-px-to-rem.svg)](https://badge.fury.io/js/webpack-px-to-rem)
+# Pebble Pxtorem
+`pebble-pxtorem`
 
-开发响应式网页，尤其是手机端，常常采取rem单位。这个webpack的小loader主要是省去了每次输入长、宽、字体等都要把像素px换算成rem的麻烦，
-开发时直接输入px,最后打包打包时换算为rem。
+A webpack loader for converting `px` to `rem` for your webpack
 
-[English Doc](https://github.com/CallMeXYZ/px2rem/blob/master/README-en.md)
+This is custom version / updated version of webpack-px-to-rem: fixes deprecation issues
 
-## 内容列表
-  - [介绍](#介绍)
-  - [安装](#安装)
-  - [使用](#使用)
+## Table of Contents
+  - [Introduction](#introduction)
+  - [Installation](#installation)
+  - [Usage](#usage)
 
-## 介绍
-这是你原先的css或者js代码
-```css
-// css
-div {
-    font-size: 14px;
-    width: 100px;
-}
+## Introduction
+Pebble Pxtorem is a custom Webpack loader that converts pixel (px) units to rem units in your CSS.
+
+## Installation
+
+Install the package from the GitHub repository:
+
+```bash
+npm install neverNotTired/pebble-pxtorem
 ```
+
+## Usage
 ```javascript
-// js 例如 react
-<Page style={{ fontSize: '14px', width: '100px' }} />
-```
-采取默认的 `1rem=10px` 转化后变成
-```css
-// css
-div {
-    font-size: 1.400rem;
-    width: 10rem;
-}
-```
-```javascript
-// js such as in react
-<Page style={{ fontSize: '1.400rem', width: '10rem' }} />
-```
-
-## 安装
-```javascript
-npm install webpack-px-to-rem --save-dev
-```
-
-## 使用
-```javascript
-//in your webpack.config.js
+// in your webpack.config.js
 
 module.exports={
    ...
     module:{
-        // 或者 loaders
+        // or loaders
         rules:[
             {
                 test:/\.jsx$/,
-                loader:'webpack-px-to-rem',
+                loader:'pebble-pxtorem',
+                // the query is optional
                  query:{
+                    // 1rem=npx default 10
                     basePx:10,
+                    // only convert px greater than the given value default 0
+                    // For the reason that tiny rem may be smaller than 1px and disappeare in tiny device
                     min:1,
+                    // the rem value only has specific decimal places default 3
                     floatWidth:3
                 }
-
+                
             }
         ]
     }
+    ...
   }
 ```
-=======
-# pebble-pxtorem
-Custom version of webpack-px-to-rem: fixes deprecation issues
->>>>>>> origin/main
+
+## Credit
+Credit: this is an updated version / continued support of `https://www.npmjs.com/package/webpack-px-to-rem?activeTab=code`
