@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # px2rem
 [![npm version](https://badge.fury.io/js/webpack-px-to-rem.svg)](https://badge.fury.io/js/webpack-px-to-rem)
 
@@ -65,3 +66,7 @@ module.exports={
     }
   }
 ```
+=======
+# pebble-pxtorem
+Custom version of webpack-px-to-rem: fixes deprecation issues
+>>>>>>> origin/main
