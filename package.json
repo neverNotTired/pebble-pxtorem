@@ -1,6 +1,6 @@
 {
   "name": "pebble-pxtorem",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Customized version of webpack-px-to-rem with fixed deprecation warning.",
   "keywords": [
     "px",
