@@ -17,9 +17,14 @@ Pebble Pxtorem is a custom Webpack loader that converts pixel (px) units to rem 
 
 Install the package from the GitHub repository:
 
+npm:  
+```bash
+npm install pebble-pxtorem
+```  
+git:  
 ```bash
 npm install neverNotTired/pebble-pxtorem
-```
+```  
 
 ## Usage
 ```javascript
